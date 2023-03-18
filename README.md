@@ -17,8 +17,8 @@ FastRoute and TritonRoute for Routing purpose
 Magic for layout corrections and layout verification
 Magic and kLayout for final GDSII Layout file
 
-More details on the OpenROAD flow design can be found here.
-The tutorial to run the complete flow from RTL to GDSII using OpenROAD flow scripts can be found here.
+More details on the OpenROAD flow design can be found (https://openroad.readthedocs.io/en/latest/main/README.html#build-using-support-script)
+The tutorial to run the complete flow from RTL to GDSII using OpenROAD flow scripts can be found (https://openroad-flow-scripts.readthedocs.io/en/latest/tutorials/FlowTutorial.html).
 
 Installation of ORFS tool on your system
 You can also find the resource for the steps of installation here. I have demonstrated the steps I took for installation below.
@@ -27,7 +27,7 @@ Other supported Linux based OS are Centos7, Ubuntu 20.04, Ubuntu 22.04, RHEL 8, 
 
 After logging to the Ubuntu 22.04 OS, follow the below steps,
 Clone Repository of ORFS
-git clone --recursive https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts
+`git clone --recursive https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts`
 Change directory to the ORFS folder and install all the dependencies using the script. The script installs all the required dependencies and packages for the OpenROAD flow.
 cd OpenROAD-flow-scripts
 sudo ./etc/DependencyInstaller.sh
@@ -44,4 +44,4 @@ source ./setup_env.sh
 yosys -help
 openroad -help
 exit
-Note: Every time when you open the new terminal, you need to source the setup_env.sh file
+> Note: Every time when you open the new terminal, you need to source the setup_env.sh file
