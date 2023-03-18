@@ -31,6 +31,12 @@ git clone --recursive https://github.com/The-OpenROAD-Project/OpenROAD-flow-scri
 Change directory to the ORFS folder and install all the dependencies using the script. The script installs all the required dependencies and packages for the OpenROAD flow.
 cd OpenROAD-flow-scripts
 sudo ./etc/DependencyInstaller.sh
+
+Now, for CentOS 7 users, run below two commands before moving to further to build an openroad script.
+source /opt/rh/devtoolset-8/enable
+source /opt/rh/llvm-toolset-7.0/enable
+Note: If you are Ubuntu or Debian OS versions, skip the above steps.
+
 Next is to build and install the OpenROAD tool
 ./build_openroad.sh --local
 To verify the installation, you can run below and check
@@ -38,3 +44,4 @@ source ./setup_env.sh
 yosys -help
 openroad -help
 exit
+Note: Every time when you open the new terminal, you need to source the setup_env.sh file
