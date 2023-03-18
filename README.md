@@ -60,8 +60,9 @@ To verify the installation, you can run below and check
 
 ## Updating OpenROAD Flow Scripts
 Keeping the repository up-to-date is better as it keeps changing and updating by the contributors for improvements and optimization of the tool scripts
-        cd OpenROAD-flow-scripts
-        git checkout master
-        git pull
-        git submodule update
-        ./build_openroad.sh --local --clean
+
+    cd OpenROAD-flow-scripts
+    git checkout master
+    git pull
+    git submodule update
+    ./build_openroad.sh --local --clean
