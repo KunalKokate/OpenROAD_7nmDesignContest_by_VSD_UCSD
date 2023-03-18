@@ -57,3 +57,11 @@ To verify the installation, you can run below and check
     exit
 
 > Note: Every time when you open the new terminal, you need to source the setup_env.sh file  
+
+## Updating OpenROAD Flow Scripts
+Keeping the repository up-to-date is better as it keeps changing and updating by the contributors for improvements and optimization of the tool scripts
+        cd OpenROAD-flow-scripts
+        git checkout master
+        git pull
+        git submodule update
+        ./build_openroad.sh --local --clean
