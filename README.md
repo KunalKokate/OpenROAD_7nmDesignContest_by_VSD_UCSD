@@ -29,8 +29,8 @@ After logging to the Ubuntu 22.04 OS, follow the below steps,
 Clone Repository of ORFS
 `git clone --recursive https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts`
 Change directory to the ORFS folder and install all the dependencies using the script. The script installs all the required dependencies and packages for the OpenROAD flow.
-cd OpenROAD-flow-scripts
-sudo ./etc/DependencyInstaller.sh
+`cd OpenROAD-flow-scripts
+sudo ./etc/DependencyInstaller.sh`
 
 Now, for CentOS 7 users, run below two commands before moving to further to build an openroad script.
 source /opt/rh/devtoolset-8/enable
