@@ -8,6 +8,13 @@ ORFS provides a collection of open-source tools required for automating the digi
 **OpenROAD** is a foundational application for building designs from complete RTL-to-GDSII flow which is built entirely on open-source tools for semiconductor digital designs. It is an integrated chip design which takes a design from synthesis, floorplanning, placement, routing, sign-off parasitic extraction, timing analysis leading to a final GDSII layout.
 It is also a tool that focuses on delivering autonomous, no-human intervention in-loop and 24 hour turnaround for RTL to GDSII for design exploration and physical design implementation. The placement algorithm works on minimizing the wire length, improving the timing, area and power consumption. Since it’s an open-source design, it allows the users to add their own algorithm if optimized and update more features to it.
 
+Before moving ahead to the OpenROAD and it's usage, let's understand the processes carried out in the VLSI Physical Design Flow.  
+
+<p align="center">
+  <img src="https://www.maven-silicon.com/blog/wp-content/uploads/2022/08/pd-1.png" width=250 height= 300 />
+</p>
+
+
 ## The Design Flow and Tools utilized in OpenROAD Flow Scripts: 
 **Verilog** is used as a basic input method to do the design entries for any specific design project.  
 And once ORFS is installed, we can specify the design parameters like technology node, the design constraints and tools settings to meet the user’s design projects.  
@@ -63,7 +70,7 @@ It is recommended strictly to not rename any files and directories in the OpenRO
 You can add new designs inside the "flow" directory with the required directory structures. I will give a brief overview of the directories inside ORFS - 
 * docker - For the docker based installation, it has a Dependency Installer Script which installs all the required tools and packages for ORFS design.  
 * docs - It contains basis documentation or tutorial for the flow. Here is a direct link for the [Flow Tutorial](https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts/blob/master/docs/tutorials/FlowTutorial.md)  
-* flow - Contains all the required files responsible to compile complete RTL to GDSII flow including Synthesis, Floorplanning, Placement, Routing, Parasitic Extraction and Timing.  
+* flow - Contains all the required files responsible to compile complete RTL to GDSII flow including Floorplanning, Placement, Clock Tree Synthesis, Routing, Static Timing Analysis (STA), Design Rule Check (DRC), Layout vs Schematic (LVS) and Parasitic Extraction.    
 * etc - This is a main directory when it comes to new installation of ORFS. It contains a Dependency Installer, which takes care all the installation resources for design.  
 * jenkins - Contains the regression test files for build updates.  
 * tools - Contains all the required tools for running complete RTL to GDSII flow as listed above.  
