@@ -58,6 +58,18 @@ To verify the installation, you can run below and check
 
 > Note: Every time when you open the new terminal, you need to source the setup_env.sh file  
 
+## Directory Structure and File Formats in OpenROAD Flow Scripts: 
+It is recommended strictly to not rename any files and directories in the OpenROAD-flow-scripts directory as it may give compilation errors in future.
+You can add new designs inside the "flow" directory with the required directory structures. I will give a brief overview of the directories inside ORFS - 
+* docker - For the docker based installation, it has a Dependency Installer Script which installs all the required tools and packages for ORFS design.  
+* docs - It contains basis documentation or tutorial for the flow. Here is a direct link for the [Flow Tutorial](https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts/blob/master/docs/tutorials/FlowTutorial.md)  
+* flow - Contains all the required files responsible to compile complete RTL to GDSII flow including Synthesis, Floorplanning, Placement, Routing, Parasitic Extraction and Timing.  
+* etc - This is a main directory when it comes to new installation of ORFS. It contains a Dependency Installer, which takes care all the installation resources for design.  
+* jenkins - Contains the regression test files for build updates.  
+* tools - Contains all the required tools for running complete RTL to GDSII flow as listed above.  
+* setup_env.sh - This is a source file which sources all the openroad tools to run full RTL to GDSII flow.
+* build_openroad.sh -  To build the openroad tools.  
+
 ## Updating OpenROAD Flow Scripts
 Keeping the repository up-to-date is better as it keeps changing and updating by the contributors for improvements and optimization of the tool scripts
 
