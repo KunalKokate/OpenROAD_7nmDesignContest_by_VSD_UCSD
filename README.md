@@ -102,3 +102,17 @@ Uncomment the line 'DESIGN_CONFIG=./designs/tsmc65lp/swerv_wrapper/config.mk' in
 
 And then run make. That's it.  
 
+In my case, I have ran the default NANGATE45 based design. It took around 2 to 5 minutes only for me to perform full RTL to GDSII flow and got the results as below,  
+
+    [INFO] Writing out GDS/OAS 'results/nangate45/gcd/base/6_1_merged.gds'
+    Elapsed time: 0:03.35[h:]min:sec. CPU time: user 1.18 sys 0.94 (63%). Peak memory: 373444KB.
+    cp results/nangate45/gcd/base/6_1_merged.gds results/nangate45/gcd/base/6_final.gds
+    
+## OpenROAD GUI
+To see the GUI interface of OpenROAD, run below command  
+
+    make gui_final
+    
+A very interative and colourful GUI screen will pop-up with all the details.  
+![image](https://user-images.githubusercontent.com/42606968/226173763-e286d7c0-78db-4cb2-b9a7-b792e40adf0b.png)
+
