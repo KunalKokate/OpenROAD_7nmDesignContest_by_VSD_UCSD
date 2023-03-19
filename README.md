@@ -78,3 +78,27 @@ Keeping the repository up-to-date is better as it keeps changing and updating by
     git pull
     git submodule update
     ./build_openroad.sh --local --clean
+
+## How to run the processor designs with desired supported PDKs to perform the RTL to GDSII flow?
+OpenROAD has made it way easier to run the designs for testing the performance metrics of any design. You just need to modify the **MakeFile** in the flow directory.
+There are several designs already present in the Makefile configured for running on different supported PDKs. The default PDK is set as 'NANGATE45' to run the 'gcd' processor design.  
+To run the design, simply enter below command,  
+
+    make
+    
+If you wish to run some other design with different PDK, you can comment the default NANGATE45 based design line 'DESIGN_CONFIG ?= ./designs/nangate45/gcd/config.mk' as below,
+
+    #DESIGN_CONFIG ?= ./designs/nangate45/gcd/config.mk
+
+And uncommment the design you wish to run to perform the full RTL to GDSII flow for the same.  
+For example, if I want to run 'swerv_wrapper' processor using 'TSMC651P' PDK
+Uncomment the line 'DESIGN_CONFIG=./designs/tsmc65lp/swerv_wrapper/config.mk' in the Makefile.
+
+    # DESIGN_CONFIG=./designs/tsmc65lp/jpeg/config.mk
+    # DESIGN_CONFIG=./designs/tsmc65lp/swerv/config.mk
+    DESIGN_CONFIG=./designs/tsmc65lp/swerv_wrapper/config.mk
+    # DESIGN_CONFIG=./designs/tsmc65lp/tinyRocket/config.mk
+    # DESIGN_CONFIG=./designs/tsmc65lp/vanilla5/config.mk
+
+And then run make. That's it.  
+
