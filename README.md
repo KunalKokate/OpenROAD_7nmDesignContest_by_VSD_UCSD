@@ -136,6 +136,10 @@ In my case, the results for 'Nangate45' based 'gcd' design are as below
 
 To see the power utilization report, run below.  
 
+    report_power
+
+In my case, the reported power are as below. 
+
     Group                  Internal  Switching    Leakage      Total
                               Power      Power      Power      Power (Watts)
     ----------------------------------------------------------------
@@ -151,7 +155,7 @@ To see the Area utilization report, run below.
 
     report_design_area
 
-In my case, the reported power is,  
+In my case, the reported area is,  
 
     Design area 580 u^2 65% utilization.
 
