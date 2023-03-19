@@ -116,3 +116,42 @@ To see the GUI interface of OpenROAD, run below command
 A very interative and colourful GUI screen will pop-up with all the details.  
 ![image](https://user-images.githubusercontent.com/42606968/226173763-e286d7c0-78db-4cb2-b9a7-b792e40adf0b.png)
 
+## Viewing reports using the TCL commands in OpenROAD GUI
+The main metrics that needs to be considered in a design performance and functionality are,  
+* Area - Lower the area, better is the design.
+* Power consumption - Lower the power consumed in such a low-power design, better the design.
+* Timing - (Target -> Worst Negative Slack = O)
+
+To view reports for the same, run the below TCL commands in OpenROAD GUI in the section below,  
+
+    report_worst_slack
+    report_tns
+    report_wns
+
+In my case, the results for 'Nangate45' based 'gcd' design are as below  
+
+    worst slack -0.08
+    tns -1.30
+    wns -0.08
+
+To see the power utilization report, run below.  
+
+    Group                  Internal  Switching    Leakage      Total
+                              Power      Power      Power      Power (Watts)
+    ----------------------------------------------------------------
+    Sequential             4.50e-04   5.99e-05   3.16e-06   5.13e-04  32.5%
+    Combinational          5.59e-04   4.96e-04   9.98e-06   1.06e-03  67.5%
+    Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+    Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+    ----------------------------------------------------------------
+    Total                  1.01e-03   5.56e-04   1.31e-05   1.58e-03 100.0%
+                              63.9%      35.2%       0.8%
+
+To see the Area utilization report, run below.
+
+    report_design_area
+
+In my case, the reported power is,  
+
+    Design area 580 u^2 65% utilization.
+
