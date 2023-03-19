@@ -138,7 +138,7 @@ To see the power utilization report, run below.
 
     report_power
 
-In my case, the reported power are as below. 
+In my case, the reported power is as below,  
 
     Group                  Internal  Switching    Leakage      Total
                               Power      Power      Power      Power (Watts)
@@ -155,7 +155,7 @@ To see the Area utilization report, run below.
 
     report_design_area
 
-In my case, the reported area is,  
+In my case, the reported area is as below,  
 
     Design area 580 u^2 65% utilization.
 
