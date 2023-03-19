@@ -91,7 +91,7 @@ If you wish to run some other design with different PDK, you can comment the def
     #DESIGN_CONFIG ?= ./designs/nangate45/gcd/config.mk
 
 And uncommment the design you wish to run to perform the full RTL to GDSII flow for the same.  
-For example, if I want to run 'swerv_wrapper' processor using 'TSMC651P' PDK
+For example, if I want to run 'swerv_wrapper' processor using 'TSMC65LP' PDK
 Uncomment the line 'DESIGN_CONFIG=./designs/tsmc65lp/swerv_wrapper/config.mk' in the Makefile.
 
     # DESIGN_CONFIG=./designs/tsmc65lp/jpeg/config.mk
