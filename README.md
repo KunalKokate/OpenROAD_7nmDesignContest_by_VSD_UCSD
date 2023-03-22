@@ -115,6 +115,35 @@ In my case, I have ran the default NANGATE45 based design. It took around 2 to 5
     Elapsed time: 0:03.35[h:]min:sec. CPU time: user 1.18 sys 0.94 (63%). Peak memory: 373444KB.
     cp results/nangate45/gcd/base/6_1_merged.gds results/nangate45/gcd/base/6_final.gds
     
+In the flow directory, if you open the Makefile, you will see all the designs and platforms along with the complete RTL to GDS2 flow with each step. 
+If you wish to manually run any stage of physical design, for example - If I wish to run only synthesis for the sky130hd gcd design, run the below command.
+
+    make DESIGN_CONFIG=./designs/sky130hd/gcd/config.mk synth
+
+To run Floorplan for the same design, run below
+
+    make DESIGN_CONFIG=./designs/sky130hd/gcd/config.mk floorplan
+    
+Similarly, we can run place, cts, route, finish
+
+Now, in OpenROAD design contest, we are supposed to optimize the OpenROAD runtime and scripts to improve the performance. So, if we made any changes in any config file or any other code/scripts/tools in the ORFS design, hoping to see the changes in the parameters after running the same design to see the improvement. We can try running the same scrips above to see improvements or changes in each stage manually or we can run complete RTL to GDS2 flow (as per user's preference).
+For eg. To check the improvements in Floorplan of a design, we can run the same command.
+
+    make DESIGN_CONFIG=./designs/sky130hd/gcd/config.mk floorplan
+
+However, it may throw an make error as below.
+
+    make: Nothing to be done for 'floorplan'
+
+If you get the above error, you can clean the makefile logs for that design by running below command.
+    
+    make clean_all DESIGN_CONFIG=<path>
+
+That is, 
+
+    make clean_all DESIGN_CONFIG=./designs/sky130hd/gcd/config.mk
+    
+
 ## OpenROAD GUI
 To see the GUI interface of OpenROAD, run below command  
 
