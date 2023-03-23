@@ -186,6 +186,12 @@ The main metrics that needs to be considered in a design performance and functio
 * Power consumption - Lower the power consumed in such a low-power design, better the design.
 * Timing - (Target -> Worst Negative Slack = O)
 
+Negative Slack: A negative slack occurs when the actual delay of the signal exceeds the expected delay, i.e., the actual arrival time follows the required arrival time. The presence of negative slack indicates that the design is unable to operate at the specified clock frequency.
+
+Worst negative slack (WNS): If WNS is positive then it means that the path passes. If it is negative, then it means the path fails
+
+Total negative slack (TNS): It is the sum of the (real) negative slack in your design. If 0, then the design meets timing. If it is a positive number, then it means that there is negative slack in the design (hence your design fails). It cannot be negative.
+
 To view reports for the same, run the below TCL commands in OpenROAD GUI in the section below,  
 
     report_worst_slack
@@ -197,6 +203,8 @@ In my case, the results for 'Nangate45' based 'gcd' design are as below
     worst slack -0.08
     tns -1.30
     wns -0.08
+
+> Any slack value that comes negative, indicates that the design is not meeting the timings and tends to make timing violations.
 
 To see the power utilization report, run below.  
 
