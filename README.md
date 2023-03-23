@@ -145,12 +145,39 @@ That is,
     
 
 ## OpenROAD GUI
-To see the GUI interface of OpenROAD, run below command  
+To see the GUI interface of every stage of Physical Design for a particular design in OpenROAD, we can use the GUI command.
+
+For Floorplan GUI, run below command
+
+    make gui_floorplan
+    
+![image](https://user-images.githubusercontent.com/42606968/227088581-ddbbc993-ba09-4ce4-97e8-e2d96de79dca.png)
+
+For Placement GUI, run below command
+
+    make gui_place
+
+![image](https://user-images.githubusercontent.com/42606968/227088833-38c22793-f414-4e00-80f6-ad54b61b42e5.png)
+
+For Clock Tree Synthesis (CTS), run below command
+
+    make gui_cts
+    
+![image](https://user-images.githubusercontent.com/42606968/227089033-e5807951-1b1f-44ea-ab68-c679f69aafe9.png)
+
+For Routing, run below command
+
+    make gui_route
+    
+![image](https://user-images.githubusercontent.com/42606968/227089208-22fbd42f-9703-4771-992e-b21e88874245.png)
+
+For Final Stage, run below command  
 
     make gui_final
-    
-A very interative and colourful GUI screen will pop-up with all the details.  
+     
 ![image](https://user-images.githubusercontent.com/42606968/226173763-e286d7c0-78db-4cb2-b9a7-b792e40adf0b.png)
+
+In all the above stages, a highly interative and colourful GUI screen will pop-up with all the details.
 
 ## Viewing reports using the TCL commands in OpenROAD GUI
 The main metrics that needs to be considered in a design performance and functionality are,  
