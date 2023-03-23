@@ -23,6 +23,7 @@ And then, for **Synthesis to Layout** process, below tools were used,
 * Capo and RePIAce for Floorplanning  
 * OpenROAD for Placement, which is also a plugin for Physical Design Stage, that can be configured and customized  to meet specific design projects  
 * FastRoute and TritonRoute for Routing purpose  
+* OpenRCX for Parasitic Extraction, a PEC extraction tool used to extract the Resistance and Capacitance of wires, based on coupling distance to the nearest wire and track density over/under the wire of interest, as well as abstracts. OpenRCX can also generate an '.spef' file
 * Magic for layout corrections and layout verification  
 * Magic and kLayout for final GDSII Layout file  
 
