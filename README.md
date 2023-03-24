@@ -231,3 +231,13 @@ In my case, the reported area is as below,
 
     Design area 580 u^2 65% utilization.
 
+## KLAYOUT Visualization
+
+KLayout is a CAD software user to view and print the finalized GDSII file for printing purpose using lithography. It is an open-source platform which takes the final GDS2 layout files and gives the user an interactive visual view of final design. KLayout is used in the OpenROAD flow to provide GDS merging, DRC, and LVS.
+
+After running the full RTL to GDSII flow using ORFS, you can open the design on klayout using below command  
+
+    klayout -e -nn ./platforms/nangate45/FreePDK45.lyt -l ./platforms/nangate45/FreePDK45.lyp ./results/nangate45/gcd/base/6_final.gds
+    
+It will open the file as below.
+![image](https://user-images.githubusercontent.com/42606968/227623084-a4320ff8-aab1-46d4-aebc-b0e5afb831b0.png)
