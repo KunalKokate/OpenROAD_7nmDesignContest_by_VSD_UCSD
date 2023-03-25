@@ -241,3 +241,42 @@ After running the full RTL to GDSII flow using ORFS, you can open the design on 
     
 It will open the file as below.
 ![image](https://user-images.githubusercontent.com/42606968/227623084-a4320ff8-aab1-46d4-aebc-b0e5afb831b0.png)
+
+
+## Running the design using Autotuner for further optimization of PPA (Performance, Power and Area)
+
+Autotuner is a parameter tuning tool that provides the best design parameters after running the RTL to GDSII flow withouit any human intervention. It is a JSON file where users can configure the values to the parameters for improvement of the design. AutoTuner also utilizes [METRICS2.1](https://github.com/ieee-ceda-datc/datc-rdf-Metrics4ML) to capture PPA of individual search trials. It runs the designs on python 3.9 scripts.
+
+AutoTuner provides two main functionalities as follows.
+* Automatic hyperparameter tuning framework for OpenROAD-flow-script (ORFS)
+* Parametric sweeping experiments for ORFS
+
+### Installing Autotuner for ORFS
+Autotuner compulsorily supports on python 3.9 as of now. Without installing python 3.9, the autotuner would not run.
+1. To install 'Python 3.9', run below commands  
+
+    $ sudo add-apt-repository ppa:deadsnakes/ppa
+    $ sudo apt update
+    $ sudo apt install python3.9
+    
+2. Install 'pip3.9',  
+
+    $ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+    $ python3.9 get-pip.py
+    
+If you get the below error
+
+    ModuleNotFoundError: No module named 'distutils.util'
+    
+Run below command,
+
+    sudo apt install python3.9-distutils
+    
+### Running Autotuner Tool for any desired design.
+
+All the designs should be ran from 'Openroad-flow-scripts/flow/util' directory.
+
+Then to run the Autotuner, run
+
+    python3.9 distributed.py --design gcd --platform sky130hd --config ../designs/sky130hd/gcd/autotuner.json tune
+    
