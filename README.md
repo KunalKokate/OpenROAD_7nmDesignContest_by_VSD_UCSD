@@ -290,3 +290,7 @@ After completion, it will store the result of the best parameters to autotuner b
 
     [INFO TUN-0002] Best parameters found: {'_SDC_CLK_PERIOD': 1.8959980960818625, 'CORE_UTILIZATION': 47, 'CORE_ASPECT_RATIO': 1.5650317306962374, 'CORE_MARGIN': 2, 'CELL_PAD_IN_SITES_GLOBAL_PLACEMENT': 3, 'CELL_PAD_IN_SITES_DETAIL_PLACEMENT': 1, '_FR_LAYER_ADJUST': 0.41994687571365186, 'PLACE_DENSITY_LB_ADDON': 0.6595883330590898, '_PINS_DISTANCE': 2, 'CTS_CLUSTER_SIZE': 187, 'CTS_CLUSTER_DIAMETER': 139, '_FR_GR_OVERFLOW': 1}
     (save_best pid=28832) [INFO TUN-0003] Best parameters written to /home/kunal/OpenROAD-flow-scripts/flow/logs/sky130hd/gcd/test-tune-2023-03-25-19-31-54/autotuner-best-e5b86696.json
+
+## Acknowledgement
+1. OpenROAD Team
+2. VSD (VLSI System Design Corporation Pvt. Ltd) and UCSD (University of California, San Deigo)
