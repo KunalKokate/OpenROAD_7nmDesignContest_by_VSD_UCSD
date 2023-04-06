@@ -1,6 +1,11 @@
 # OpenROAD_7nm Physical Design Contest by VSD (VLSI System Design) & UCSD (University of California San Diego)
 The repository reflects my learnings and concepts I understood during the OpenROAD Design Contest. Details for the contest can be found on (https://www.openroaddesigncontest.org/)
 
+## Contest work and implementation
+My contest work is demonstrated clearly with the details of contest, steps taken, modification in the open source scripts of **OpenROAD Flow Scripts** and screenshots. 
+You can find my work [here](https://github.com/KunalKokate/OpenROAD-flow-scripts/blob/7nmcontest/7nmdesigncontest.md).  
+While, the documentation can also be found [here](https://github.com/KunalKokate/OpenROAD-flow-scripts/tree/7nmcontest/flow/Contest%20Documentation).  
+
 ## About OpenROAD and it's Flow Controllers (OpenROAD Flow Scripts and OpenLANE)
 **ORFS** is a short form for OpenROAD Flow Scripts. **OpenROAD flow scripts** and **OpenLANE** are flow-controllers supported by the OpenROAD Design project repository.  
 ORFS provides a collection of open-source tools required for automating the digital design from synthesis to layout for complete RTL to GDSII flow, includes Synthesis, Placement and Routing (PnR), Static Timing Analysis (STA), Design Rule check (DRC) and Layout versus Schematic (LVS) check.
@@ -13,7 +18,6 @@ Before moving ahead to the OpenROAD and it's usage, let's understand the process
 <p align="center">
   <img src="https://www.maven-silicon.com/blog/wp-content/uploads/2022/08/pd-1.png" width=250 height= 300 />
 </p>
-
 
 ## The Design Flow and Tools utilized in OpenROAD Flow Scripts: 
 **Verilog** is used as a basic input method to do the design entries for any specific design project.  
